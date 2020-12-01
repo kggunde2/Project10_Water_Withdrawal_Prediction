@@ -1,7 +1,7 @@
 ---
 author-meta:
-- John Doe
-- Jane Roe
+- Kathryn Grace Gunderson
+- Yanan Chen
 bibliography:
 - content/manual-references.json
 date-meta: '2020-12-01'
@@ -15,13 +15,13 @@ header-includes: '<!--
 
   <meta name="dc.format" content="text/html" />
 
-  <meta name="dc.title" content="Manuscript Title" />
+  <meta name="dc.title" content="CEE 498 Project 10: Water Withdrawal Prediction" />
 
-  <meta name="citation_title" content="Manuscript Title" />
+  <meta name="citation_title" content="CEE 498 Project 10: Water Withdrawal Prediction" />
 
-  <meta property="og:title" content="Manuscript Title" />
+  <meta property="og:title" content="CEE 498 Project 10: Water Withdrawal Prediction" />
 
-  <meta property="twitter:title" content="Manuscript Title" />
+  <meta property="twitter:title" content="CEE 498 Project 10: Water Withdrawal Prediction" />
 
   <meta name="dc.date" content="2020-12-01" />
 
@@ -39,21 +39,13 @@ header-includes: '<!--
 
   <meta name="citation_technical_report_institution" content="Manubot" />
 
-  <meta name="citation_author" content="John Doe" />
+  <meta name="citation_author" content="Kathryn Grace Gunderson" />
 
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
+  <meta name="citation_author_institution" content="Civil and Environmental Engineering, University of Illinois at Urbana-Champaign" />
 
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author" content="Yanan Chen" />
 
-  <meta name="twitter:creator" content="@johndoe" />
-
-  <meta name="citation_author" content="Jane Roe" />
-
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-
-  <meta name="citation_author_institution" content="Department of Whatever, University of Something" />
-
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author_institution" content="Civil and Environmental Engineering, University of Illinois at Urbana-Champaign" />
 
   <link rel="canonical" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/" />
 
@@ -67,11 +59,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/d6229f9523f79dd1201c9d440c3d0f90173e0b75/" />
+  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/acfb79196fa4a9e5ce6e1061d411c7a737aa34d9/" />
 
-  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/d6229f9523f79dd1201c9d440c3d0f90173e0b75/" />
+  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/acfb79196fa4a9e5ce6e1061d411c7a737aa34d9/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/d6229f9523f79dd1201c9d440c3d0f90173e0b75/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/acfb79196fa4a9e5ce6e1061d411c7a737aa34d9/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -85,15 +77,15 @@ header-includes: '<!--
 
   <!-- end Manubot generated metadata -->'
 keywords:
-- markdown
-- publishing
-- manubot
+- water withdrawal per capita
+- neural network
+- random forest
 lang: en-US
 manubot-clear-requests-cache: false
 manubot-output-bibliography: output/references.json
 manubot-output-citekeys: output/citations.tsv
 manubot-requests-cache-path: ci/cache/requests-cache
-title: Manuscript Title
+title: 'CEE 498 Project 10: Water Withdrawal Prediction'
 ...
 
 
@@ -103,9 +95,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/d6229f9523f79dd1201c9d440c3d0f90173e0b75/))
+([permalink](https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/acfb79196fa4a9e5ce6e1061d411c7a737aa34d9/))
 was automatically generated
-from [gooood-night/Project10_Water_Withdrawal_Prediction@d6229f9](https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/d6229f9523f79dd1201c9d440c3d0f90173e0b75)
+from [gooood-night/Project10_Water_Withdrawal_Prediction@acfb791](https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/acfb79196fa4a9e5ce6e1061d411c7a737aa34d9)
 on December 1, 2020.
 </em></small>
 
@@ -113,25 +105,16 @@ on December 1, 2020.
 
 
 
-+ **John Doe**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
-    · ![GitHub icon](images/github.svg){.inline_icon}
-    [johndoe](https://github.com/johndoe)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
-    [johndoe](https://twitter.com/johndoe)<br>
++ **Kathryn Grace Gunderson**<br><br>
   <small>
-     Department of Something, University of Whatever
-     · Funded by Grant XXXXXXXX
+     Civil and Environmental Engineering, University of Illinois at Urbana-Champaign
   </small>
 
-+ **Jane Roe**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
++ **Yanan Chen**<br>
     · ![GitHub icon](images/github.svg){.inline_icon}
-    [janeroe](https://github.com/janeroe)<br>
+    [gooood-night](https://github.com/gooood-night)<br>
   <small>
-     Department of Something, University of Whatever; Department of Whatever, University of Something
+     Civil and Environmental Engineering, University of Illinois at Urbana-Champaign
   </small>
 
 
