@@ -67,11 +67,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/97b294802ffcd39071b6e5b8ab59f60faf4be118/" />
+  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/d6229f9523f79dd1201c9d440c3d0f90173e0b75/" />
 
-  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/97b294802ffcd39071b6e5b8ab59f60faf4be118/" />
+  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/d6229f9523f79dd1201c9d440c3d0f90173e0b75/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/97b294802ffcd39071b6e5b8ab59f60faf4be118/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/d6229f9523f79dd1201c9d440c3d0f90173e0b75/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/97b294802ffcd39071b6e5b8ab59f60faf4be118/))
+([permalink](https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/d6229f9523f79dd1201c9d440c3d0f90173e0b75/))
 was automatically generated
-from [gooood-night/Project10_Water_Withdrawal_Prediction@97b2948](https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/97b294802ffcd39071b6e5b8ab59f60faf4be118)
+from [gooood-night/Project10_Water_Withdrawal_Prediction@d6229f9](https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/d6229f9523f79dd1201c9d440c3d0f90173e0b75)
 on December 1, 2020.
 </em></small>
 
