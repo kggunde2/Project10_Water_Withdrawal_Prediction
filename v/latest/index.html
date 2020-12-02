@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Kathryn Grace Gunderson" />
   <meta name="author" content="Yanan Chen" />
-  <meta name="dcterms.date" content="2020-12-01" />
+  <meta name="dcterms.date" content="2020-12-02" />
   <meta name="keywords" content="water withdrawal per capita, neural network, random forest" />
   <title>CEE 498 Project 10: Water Withdrawal Prediction</title>
   <style>
@@ -91,8 +91,8 @@
   <meta name="citation_title" content="CEE 498 Project 10: Water Withdrawal Prediction" />
   <meta property="og:title" content="CEE 498 Project 10: Water Withdrawal Prediction" />
   <meta property="twitter:title" content="CEE 498 Project 10: Water Withdrawal Prediction" />
-  <meta name="dc.date" content="2020-12-01" />
-  <meta name="citation_publication_date" content="2020-12-01" />
+  <meta name="dc.date" content="2020-12-02" />
+  <meta name="citation_publication_date" content="2020-12-02" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -109,9 +109,9 @@
   <meta name="citation_fulltext_html_url" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/" />
   <meta name="citation_pdf_url" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/acfb79196fa4a9e5ce6e1061d411c7a737aa34d9/" />
-  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/acfb79196fa4a9e5ce6e1061d411c7a737aa34d9/" />
-  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/acfb79196fa4a9e5ce6e1061d411c7a737aa34d9/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/68f6540864379ac4d254c3f9cdb313910f9e4e09/" />
+  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/68f6540864379ac4d254c3f9cdb313910f9e4e09/" />
+  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/68f6540864379ac4d254c3f9cdb313910f9e4e09/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -132,10 +132,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/acfb79196fa4a9e5ce6e1061d411c7a737aa34d9/">permalink</a>)
+(<a href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/68f6540864379ac4d254c3f9cdb313910f9e4e09/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/acfb79196fa4a9e5ce6e1061d411c7a737aa34d9">gooood-night/Project10_Water_Withdrawal_Prediction@acfb791</a>
-on December 1, 2020.
+from <a href="https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/68f6540864379ac4d254c3f9cdb313910f9e4e09">gooood-night/Project10_Water_Withdrawal_Prediction@68f6540</a>
+on December 2, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -151,10 +151,22 @@ Civil and Environmental Engineering, University of Illinois at Urbana-Champaign
 </small></p></li>
 </ul>
 <h2 class="page_break_before" id="abstract">Abstract</h2>
-<p>This manuscript is a template (aka “rootstock”) for <a href="https://manubot.org/" title="Manubot">Manubot</a>, a tool for writing scholarly manuscripts.
-Use this template as a starting point for your manuscript.</p>
-<p>The rest of this document is a full list of formatting elements/features supported by Manubot.
-Compare the input (<code>.md</code> files in the <code>/content</code> directory) to the output you see below.</p>
+<h2 id="introduction">1. Introduction</h2>
+<h3 id="background">1.1 Background</h3>
+<p>Water is a kind of crucial and finite resources. Only one percent of the water in the world is readily accessible for human use. With the increase of population and the development of society and economics, many countries are faced with water scarcity. In recent years, climate change and land use changes have affected hydrological processes, bringing high uncertainty to precipitation and river flow. Consequently, the water supply systems are under huge pressure. In this case, improving the accuracy of water consumption prediction is of vital importance, which is not only necessary to design new water facilities, but also essential to optimize the operation and management of the existing water supply systems.</p>
+<p>Water consumption is affected many factors, such as water availability, climate, demographics, economics, etc. Machine learning methods have the ability to capture the correlations between independent variables and the non-linear relationships between features and the target variables, so ML methods have been widely applied to complex water consumption modeling and water demand prediction. Villarin and Rodriguez-Galiano (2019) applied two tree-based machine learning methods, including classification and regression trees (CART) and random forest (RF), to the water demand modeling in the city of Seville, Spain at the census tract level. They choose 16 variables that represent the sociodemographic and urban building characteristics of urban area as the independent variables to predict water consumption per capita. The results show that RF model performs better than CART model.</p>
+<h3 id="objective">1.2 Objective</h3>
+<p>The goal of the project is to use machine learning algorithms to predict water withdrawal per capital in the world. Compared with previous, our project will use worldwide data at national scale rather than the data from one city or one country, and we will involve more independent variables such as precipitation, renewable water resources, GDP per capital in order to improve the prediction results. Meanwhile, we plan to use two machine learning algorithms: Neural networks and Random Forest to predict the target variable respectively and compare the model performances. We hope to find a ML method that produces more accurate predictions of water withdrawal, which allows improvement of water resources planning and management.</p>
+<h2 id="data">2. Data</h2>
+<h3 id="raw-data">2.1 Raw Data</h3>
+<p>The raw dataset was obtained from FAO’s Global Information System on Water and Agriculture (AQUASTAT). AQUASTAT provides free access to over 180 variables and indicators by country from 1960s, which are mainly related to water resources, water uses and agricultural water management.
+In this project, we intend to predict annual total water withdrawal per capita and select 13 variables as features based on previous studies, which provide information about geography, economic, climate, water resources utilities, etc. So, the raw dataset used includes 1 dependent variable and 13 features that span 200 countries across 8 different five-year periods from 1978 to 2017.</p>
+<h3 id="exploratory-data-analysis">2.2 Exploratory Data Analysis</h3>
+<p>This project aims at predicting water withdrawal per capita. Water withdrawal per capita is affected many factors, such as water availability, climate, demographics, economics, etc. Let’s first look at the water withdrawal per capita.</p>
+<p>As shown in Figure 1, the distribution of total water withdrawal is not symmetric. For 75% entries, the annual total water withdrawal per capita is less than 704.7 m3/inhab/year, while the maximum annual total water withdrawal per capita is 5739 m3/inhab/year. The difference between countries is huge. Let us closely look at the average annual total water withdrawal per capita during 2013-2017 in each country.</p>
+<p>Although the water withdrawal data during 2013-2017 of many African and west Asian countries are missing, we can find that the water withdrawal per capita varies among countries from Figure 2. For most countries, the total water withdrawal per capita is below 500 m3/inhab/year, but for Canada, the United States, Kazakhstan and Uzbekistan, the value is above 1000 m3/inhab/year.</p>
+<p>The raw dataset includes 13 numerical independent variables. However, there are many missing values in the original dataset. It is found that “Human Development Index (HDI)” and “Total population with access to safe drinking-water” are two variables with most missing values. Meanwhile, the correlation coefficients between the target variables and these two independent variables are small. So, these two variables are dropped. After further data cleaning, finally we have a dataset with 410 samples and 11 numerical features and 2 categorical features for predicting water withdrawal per capita.</p>
+<p>Figure 3 shows how the 11 independent variables correlate with the target variable and each other. As can be seen, “Long-term average annual precipitation in volume (10^9 m3/year)” and “Total renewable water resources (10^9 m3/year)” are highly related with the correlation coefficient of 0.97. We need to remove one of them for ML model input.</p>
 <h2 id="basic-formatting">Basic formatting</h2>
 <p><strong>Bold</strong> <strong>text</strong></p>
 <p><span class="semibold">Semi-bold text</span></p>
@@ -360,7 +372,7 @@ White background specified to serve as a backdrop for transparent sections of th
 </tbody>
 </table>
 </div>
-<div id="tbl:629b125a-e451-4c8b-a93e-9b728af275bf" class="tablenos">
+<div id="tbl:edd11c27-1045-41c8-b3e3-b8481c72e9b6" class="tablenos">
 <table>
 <caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
 </caption>
