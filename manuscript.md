@@ -59,11 +59,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/276fdff8274d80aed50ec1cf910ae717003236a3/" />
+  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b71d760431f9c53bdcbf6e8da0613aa224897b31/" />
 
-  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/276fdff8274d80aed50ec1cf910ae717003236a3/" />
+  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b71d760431f9c53bdcbf6e8da0613aa224897b31/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/276fdff8274d80aed50ec1cf910ae717003236a3/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b71d760431f9c53bdcbf6e8da0613aa224897b31/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -95,9 +95,9 @@ title: 'CEE 498 Project 10: Water Withdrawal Prediction'
 
 <small><em>
 This manuscript
-([permalink](https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/276fdff8274d80aed50ec1cf910ae717003236a3/))
+([permalink](https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b71d760431f9c53bdcbf6e8da0613aa224897b31/))
 was automatically generated
-from [gooood-night/Project10_Water_Withdrawal_Prediction@276fdff](https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/276fdff8274d80aed50ec1cf910ae717003236a3)
+from [gooood-night/Project10_Water_Withdrawal_Prediction@b71d760](https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/b71d760431f9c53bdcbf6e8da0613aa224897b31)
 on December 2, 2020.
 </em></small>
 
@@ -141,7 +141,11 @@ In this project, we intend to predict annual total water withdrawal per capita a
 ### 2.2 Exploratory Data Analysis
 This project aims at predicting water withdrawal per capita. Water withdrawal per capita is affected many factors, such as water availability, climate, demographics, economics, etc. Let's first look at the water withdrawal per capita.
 
+![** Histogram of the target variable **](images/histogram_of_total_water_withdrawal.png){#fig: histogram}
+
 As shown in Figure 1, the distribution of total water withdrawal is not symmetric. For 75% entries, the annual total water withdrawal per capita is less than 704.7 m3/inhab/year, while the maximum annual total water withdrawal per capita is 5739 m3/inhab/year. The difference between countries is huge. Let us closely look at the average annual total water withdrawal per capita during 2013-2017 in each country.
+
+![** Total water withdrawal per capita in the world **](images/worldwide_water_withdrawal.png){#fig: world}
 
 Although the water withdrawal data during 2013-2017 of many African and west Asian countries are missing, we can find that the water withdrawal per capita varies among countries from Figure 2. For most countries, the total water withdrawal per capita is below 500 m3/inhab/year, but for Canada, the United States, Kazakhstan and Uzbekistan, the value is above 1000 m3/inhab/year.
 
@@ -149,6 +153,23 @@ The raw dataset includes 13 numerical independent variables. However, there are 
 
 Figure 3 shows how the 11 independent variables correlate with the target variable and each other. As can be seen, "Long-term average annual precipitation in volume (10^9 m3/year)" and "Total renewable water resources (10^9 m3/year)" are highly related with the correlation coefficient of 0.97. We need to remove one of them for ML model input.
 
+![** Correlation coefficient **](images/variables correlation matrix.png){#fig: corr_matrix}
+
+## 3. Methods
+### 3.1 Neural Network
+Predicting water withdrawal per capita is a complex problem considering various affecting factors and non-linear relationships. We choose neural network to train our model in this project. Artificial Neural Networks have the ability to learn and model non-linear relationships, which is really important for water withdrawal prediction problem.
+
+Step 1: Data Preprocessing
+As there is no missing value in training and testing datasets, we only need to perform feature scaling for numerical variables based on the training dataset. In this step, we normalize the numerical input variables with skew higher than 3 and then standardize all the numerical variables. Considering the distribution of the target variable is skewed, we also normalize the target variable using log transformation.
+Since there are two categorical variables (i.e. country and year), we also do some feature engineering to prepare all the variables for use in the model.
+Step 2: Modeling
+We design a DNN model with one feature layer, three hidden layers, one linear single-output layer and one layer that inverses the standardization transformation. And for each hidden layer, there is 64 units. To reduce overfitting, dropout is implemented per-layer in the neural network. We choose rectified linear unit activation function (ReLU) as the activation function of hidden layers, which is not only easier to compute but also works better than a smooth function such as the sigmoid. Besides, we choose Mean Squared Error (MSE) as the loss function of our model.
+Step 3: Hyperparameter Tuning
+We will use Grid Search that can test the performance of different combinations of hyperparameter values and find the optimal one. The hyperparameters that will be tuned include learning rate, batch size, epochs and dropout rate. In this step, we ignore two categorical variables and only use ten numerical variables as chosen features. 
+Step 4: Predicting 
+After obtaining the best combination of hyperparameter values, we train the neural network using training set (287 examples * 80%) and check the performance of model using validation set (287 examples * 20%). Then we use it to predict the annual water withdrawal per capita in the testing set (123 examples).
+
+### 3.2 Random Forests
 
 ## Basic formatting
 
