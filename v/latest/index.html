@@ -109,9 +109,9 @@
   <meta name="citation_fulltext_html_url" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/" />
   <meta name="citation_pdf_url" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/cbae5c243289559cdddb4892b82343ea8c58c991/" />
-  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/cbae5c243289559cdddb4892b82343ea8c58c991/" />
-  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/cbae5c243289559cdddb4892b82343ea8c58c991/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b8740cc0a26847655dba98842b5fb8c0df524e26/" />
+  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b8740cc0a26847655dba98842b5fb8c0df524e26/" />
+  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b8740cc0a26847655dba98842b5fb8c0df524e26/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -132,9 +132,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/cbae5c243289559cdddb4892b82343ea8c58c991/">permalink</a>)
+(<a href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b8740cc0a26847655dba98842b5fb8c0df524e26/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/cbae5c243289559cdddb4892b82343ea8c58c991">gooood-night/Project10_Water_Withdrawal_Prediction@cbae5c2</a>
+from <a href="https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/b8740cc0a26847655dba98842b5fb8c0df524e26">gooood-night/Project10_Water_Withdrawal_Prediction@b8740cc</a>
 on December 3, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -163,13 +163,25 @@ Civil and Environmental Engineering, University of Illinois at Urbana-Champaign
 In this project, we intend to predict annual total water withdrawal per capita and select 13 variables as features based on previous studies, which provide information about geography, economic, climate, water resources utilities, etc. So, the raw dataset used includes 1 dependent variable and 13 features that span 200 countries across 8 different five-year periods from 1978 to 2017.</p>
 <h3 id="exploratory-data-analysis">2.2 Exploratory Data Analysis</h3>
 <p>This project aims at predicting water withdrawal per capita. Water withdrawal per capita is affected many factors, such as water availability, climate, demographics, economics, etc. Let’s first look at the water withdrawal per capita.</p>
-<p><img src="images/histogram_of_total_water_withdrawal.png" id="fig:" style="width:4in" alt="Histogram of the target variable" />{.center}</p>
+<div id="fig:9c51c5da-ac29-4b98-a847-4b86acbc55f6" class="fignos">
+<figure>
+<img src="images/histogram_of_total_water_withdrawal.png" style="width:4in" alt="" /><figcaption><span>Figure 1:</span> <strong>Histogram of the target variable</strong></figcaption>
+</figure>
+</div>
 <p>As shown in Figure 1, the distribution of total water withdrawal is not symmetric. For 75% entries, the annual total water withdrawal per capita is less than 704.7 m3/inhab/year, while the maximum annual total water withdrawal per capita is 5739 m3/inhab/year. The difference between countries is huge. Let us closely look at the average annual total water withdrawal per capita during 2013-2017 in each country.</p>
-<p><img src="images/world.png" id="fig:" style="width:7in" alt="Total water withdrawal per capita in the world" />{.center}</p>
+<div id="fig:996e3478-b41a-45a5-ae6f-9b464bebf9ec" class="fignos">
+<figure>
+<img src="images/world.png" style="width:7in" alt="" /><figcaption><span>Figure 2:</span> <strong>Total water withdrawal per capita in the world</strong></figcaption>
+</figure>
+</div>
 <p>Although the water withdrawal data during 2013-2017 of many African and west Asian countries are missing, we can find that the water withdrawal per capita varies among countries from Figure 2. For most countries, the total water withdrawal per capita is below 500 m3/inhab/year, but for Canada, the United States, Kazakhstan and Uzbekistan, the value is above 1000 m3/inhab/year.</p>
 <p>The raw dataset includes 13 numerical independent variables. However, there are many missing values in the original dataset. It is found that “Human Development Index (HDI)” and “Total population with access to safe drinking-water” are two variables with most missing values. Meanwhile, the correlation coefficients between the target variables and these two independent variables are small. So, these two variables are dropped. After further data cleaning, finally we have a dataset with 410 samples and 11 numerical features and 2 categorical features for predicting water withdrawal per capita.</p>
 <p>Figure 3 shows how the 11 independent variables correlate with the target variable and each other. As can be seen, “Long-term average annual precipitation in volume (10^9 m3/year)” and “Total renewable water resources (10^9 m3/year)” are highly related with the correlation coefficient of 0.97. We need to remove one of them for ML model input.</p>
-<p><img src="images/variables_correlation_matrix.png" id="fig:" style="width:6.5in" alt="Correlation coefficient" />{.center}</p>
+<div id="fig:e947966f-3264-4880-b91b-8f31417a9231" class="fignos">
+<figure>
+<img src="images/variables_correlation_matrix.png" style="width:6.5in" alt="" /><figcaption><span>Figure 3:</span> <strong>Correlation coefficient</strong></figcaption>
+</figure>
+</div>
 <h2 id="methods">3. Methods</h2>
 <h3 id="neural-network">3.1 Neural Network</h3>
 <p>Predicting water withdrawal per capita is a complex problem considering various affecting factors and non-linear relationships. We choose neural network to train our model in this project. Artificial Neural Networks have the ability to learn and model non-linear relationships, which is really important for water withdrawal prediction problem.</p>
@@ -188,9 +200,21 @@ After obtaining the best combination of hyperparameter values, we train the neur
 <h2 id="results">4. Results</h2>
 <h3 id="results-of-neural-network">4.1 Results of Neural Network</h3>
 <p>We use tensorflow to build Neural Network in this project. The default values of hyperparameters are as follows: learning rate = 0.01, batch size = 40, epoch = 50, and dropout rate = 0.1. The performance of this model is shown in Figure 4 to Figure 6. The RMSE of the training data is 174.35 and the RMSE of the testing data is 259.79.</p>
-<p><img src="images/before.png" id="fig:" style="width:4in" alt="Model performance history" />{.center}</p>
-<p><img src="images/before_training.png" id="fig:" style="width:4in" alt="Predictive performance in training data" />{.center}</p>
-<p><img src="images/before_validation.png" id="fig:" style="width:4in" alt="Predictive performance in validation data" />{.center}</p>
+<div id="fig:e22ccfd3-c2da-4810-9318-5181377a43f6" class="fignos">
+<figure>
+<img src="images/before.png" style="width:4in" alt="" /><figcaption><span>Figure 4:</span> <strong>Model performance history</strong></figcaption>
+</figure>
+</div>
+<div id="fig:c806472e-b2e9-42ba-9c59-61e67b449912" class="fignos">
+<figure>
+<img src="images/before_training.png" style="width:4in" alt="" /><figcaption><span>Figure 5:</span> <strong>Predictive performance in training data</strong></figcaption>
+</figure>
+</div>
+<div id="fig:37821cfb-c7de-40c7-a7cd-891d88b03d5b" class="fignos">
+<figure>
+<img src="images/before_validation.png" style="width:4in" alt="" /><figcaption><span>Figure 6:</span> <strong>Predictive performance in validation data</strong></figcaption>
+</figure>
+</div>
 <p>We use Grid Search to tune the hyperparameters to improve the model performance. The results are shown in Table 1.</p>
 <div id="tbl:tuning" class="tablenos">
 <table>
@@ -253,9 +277,21 @@ After obtaining the best combination of hyperparameter values, we train the neur
 </tbody>
 </table>
 </div>
-<p><img src="images/dropout_0.1.png" id="fig:" style="width:4in" alt="Model performance history (dropout rate = 0.1)" />{.center}</p>
-<p><img src="images/dropout_0.2.png" id="fig:" style="width:4in" alt="Model performance history (dropout rate = 0.2)" />{.center}</p>
-<p><img src="images/bdropout_0.3.png" id="fig:" style="width:4in" alt="Model performance history (dropout rate = 0.3)" />{.center}</p>
+<div id="fig:991bb1d6-65d5-44c5-b26a-379bcd866a19" class="fignos">
+<figure>
+<img src="images/dropout_0.1.png" style="width:4in" alt="" /><figcaption><span>Figure 7:</span> <strong>Model performance history (dropout rate = 0.1)</strong></figcaption>
+</figure>
+</div>
+<div id="fig:3782e21c-853d-4716-a20c-0d1208601654" class="fignos">
+<figure>
+<img src="images/dropout_0.2.png" style="width:4in" alt="" /><figcaption><span>Figure 8:</span> <strong>Model performance history (dropout rate = 0.2)</strong></figcaption>
+</figure>
+</div>
+<div id="fig:7ca66de9-772b-49fe-84bf-9fefaa4db23b" class="fignos">
+<figure>
+<img src="images/bdropout_0.3.png" style="width:4in" alt="" /><figcaption><span>Figure 9:</span> <strong>Model performance history (dropout rate = 0.3)</strong></figcaption>
+</figure>
+</div>
 <p>As dropout rate increases, overfitting problem can be reduced, but the RMSE of both training data and validation do not decrease. Therefore, we still set dropout rate at 0.01, which gives the best performance of the model.
 So, we find the best combination of hyperparameter values as follows:</p>
 <ul>
@@ -264,8 +300,16 @@ So, we find the best combination of hyperparameter values as follows:</p>
 <li>learning rate = 0.005</li>
 <li>dropout rate = 0.1</li>
 </ul>
-<p><img src="images/after_training.png" id="fig:" style="width:4in" alt="Predictive performance in training data after hyperparameter tuning" />{.center}</p>
-<p><img src="images/after_validation.png" id="fig:" style="width:4in" alt="Predictive performance in validation data after hyperparameter tuning" />{.center}</p>
+<div id="fig:af19f7d0-7c0b-48f2-a37c-e4288ec1851d" class="fignos">
+<figure>
+<img src="images/after_training.png" style="width:4in" alt="" /><figcaption><span>Figure 10:</span> <strong>Predictive performance in training data after hyperparameter tuning</strong></figcaption>
+</figure>
+</div>
+<div id="fig:e4dee5db-d536-44ff-9ea3-87691118eda1" class="fignos">
+<figure>
+<img src="images/after_validation.png" style="width:4in" alt="" /><figcaption><span>Figure 11:</span> <strong>Predictive performance in validation data after hyperparameter tuning</strong></figcaption>
+</figure>
+</div>
 <p>Finally, we use this neural network to predict the total annual water withdrawal per capita in the testing dataset, and the Root Mean Squared Error is 144.82.</p>
 <h2 id="basic-formatting">Basic formatting</h2>
 <p><strong>Bold</strong> <strong>text</strong></p>
@@ -340,10 +384,10 @@ two spaces at end of line.</p>
 Manubot plugins provide easier, more convenient visualization of and navigation between citations <span class="citation" data-cites="YuJbg3zO 126Wi5Us4 mSMVRkoc PZMP42Ak">[<a href="#ref-mSMVRkoc" role="doc-biblioref">2</a>,<a href="#ref-126Wi5Us4" role="doc-biblioref">3</a>,<a href="#ref-PZMP42Ak" role="doc-biblioref">7</a>,<a href="#ref-YuJbg3zO" role="doc-biblioref">8</a>]</span>.</p>
 <p>Citation tags (i.e. aliases) can be defined in their own paragraphs using Markdown’s reference link syntax:</p>
 <h2 id="referencing-figures-tables-equations">Referencing figures, tables, equations</h2>
-<p>Figure <a href="#fig:square-image">1</a></p>
-<p>Figure <a href="#fig:wide-image">2</a></p>
-<p>Figure <a href="#fig:tall-image">3</a></p>
-<p>Figure <a href="#fig:vector-image">4</a></p>
+<p>Figure <a href="#fig:square-image">12</a></p>
+<p>Figure <a href="#fig:wide-image">13</a></p>
+<p>Figure <a href="#fig:tall-image">14</a></p>
+<p>Figure <a href="#fig:vector-image">15</a></p>
 <p>Table <a href="#tbl:bowling-scores">3</a></p>
 <p>Equation <a href="#eq:regular-equation">1</a></p>
 <p>Equation <a href="#eq:long-equation">2</a></p>
@@ -372,25 +416,25 @@ Exporting PDF manuscript</code></pre>
 <h2 id="figures">Figures</h2>
 <div id="fig:square-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png" alt="" /><figcaption><span>Figure 1:</span> <strong>A square image at actual size and with a bottom caption.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png" alt="" /><figcaption><span>Figure 12:</span> <strong>A square image at actual size and with a bottom caption.</strong>
 Loaded from the latest version of image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:wide-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png" alt="" /><figcaption><span>Figure 2:</span> <strong>An image too wide to fit within page at full size.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png" alt="" /><figcaption><span>Figure 13:</span> <strong>An image too wide to fit within page at full size.</strong>
 Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:tall-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png" style="height:3in" alt="" /><figcaption><span>Figure 3:</span> <strong>A tall image with a specified height.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png" style="height:3in" alt="" /><figcaption><span>Figure 14:</span> <strong>A tall image with a specified height.</strong>
 Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:vector-image" class="fignos">
 <figure>
-<img src="https://raw.githubusercontent.com/manubot/resources/master/test/vector.svg?sanitize=true" class="white" style="height:2.5in" alt="" /><figcaption><span>Figure 4:</span> <strong>A vector <code>.svg</code> image loaded from GitHub.</strong>
+<img src="https://raw.githubusercontent.com/manubot/resources/master/test/vector.svg?sanitize=true" class="white" style="height:2.5in" alt="" /><figcaption><span>Figure 15:</span> <strong>A vector <code>.svg</code> image loaded from GitHub.</strong>
 The parameter <code>sanitize=true</code> is necessary to properly load SVGs hosted via GitHub URLs.
 White background specified to serve as a backdrop for transparent sections of the image.</figcaption>
 </figure>
@@ -472,7 +516,7 @@ White background specified to serve as a backdrop for transparent sections of th
 </tbody>
 </table>
 </div>
-<div id="tbl:623e416f-365b-4d45-bbf2-b23c6db0f8d0" class="tablenos">
+<div id="tbl:75a29178-5b6c-4b84-9b6d-c3d599cc6677" class="tablenos">
 <table>
 <caption><span>Table 5:</span> A table with merged cells using the <code>attributes</code> plugin.
 </caption>
