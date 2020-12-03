@@ -59,11 +59,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b8740cc0a26847655dba98842b5fb8c0df524e26/" />
+  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/4f834d3aff6094f4d3e39c0211d3b53d50d16842/" />
 
-  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b8740cc0a26847655dba98842b5fb8c0df524e26/" />
+  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/4f834d3aff6094f4d3e39c0211d3b53d50d16842/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b8740cc0a26847655dba98842b5fb8c0df524e26/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/4f834d3aff6094f4d3e39c0211d3b53d50d16842/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -95,9 +95,9 @@ title: 'CEE 498 Project 10: Water Withdrawal Prediction'
 
 <small><em>
 This manuscript
-([permalink](https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b8740cc0a26847655dba98842b5fb8c0df524e26/))
+([permalink](https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/4f834d3aff6094f4d3e39c0211d3b53d50d16842/))
 was automatically generated
-from [gooood-night/Project10_Water_Withdrawal_Prediction@b8740cc](https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/b8740cc0a26847655dba98842b5fb8c0df524e26)
+from [gooood-night/Project10_Water_Withdrawal_Prediction@4f834d3](https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/4f834d3aff6094f4d3e39c0211d3b53d50d16842)
 on December 3, 2020.
 </em></small>
 
@@ -160,16 +160,20 @@ Figure 3 shows how the 11 independent variables correlate with the target variab
 Predicting water withdrawal per capita is a complex problem considering various affecting factors and non-linear relationships. We choose neural network to train our model in this project. Artificial Neural Networks have the ability to learn and model non-linear relationships, which is really important for water withdrawal prediction problem.
 
 - Step 1: Data Preprocessing
+
 As there is no missing value in training and testing datasets, we only need to perform feature scaling for numerical variables based on the training dataset. In this step, we normalize the numerical input variables with skew higher than 3 and then standardize all the numerical variables. Considering the distribution of the target variable is skewed, we also normalize the target variable using log transformation.
 Since there are two categorical variables (i.e. country and year), we also do some feature engineering to prepare all the variables for use in the model.
 
 - Step 2: Modeling
+
 We design a DNN model with one feature layer, three hidden layers, one linear single-output layer and one layer that inverses the standardization transformation. And for each hidden layer, there is 64 units. To reduce overfitting, dropout is implemented per-layer in the neural network. We choose rectified linear unit activation function (ReLU) as the activation function of hidden layers, which is not only easier to compute but also works better than a smooth function such as the sigmoid. Besides, we choose Mean Squared Error (MSE) as the loss function of our model.
 
 - Step 3: Hyperparameter Tuning
+
 We will use Grid Search that can test the performance of different combinations of hyperparameter values and find the optimal one. The hyperparameters that will be tuned include learning rate, batch size, epochs and dropout rate. In this step, we ignore two categorical variables and only use ten numerical variables as chosen features. 
 
 - Step 4: Predicting 
+
 After obtaining the best combination of hyperparameter values, we train the neural network using training set (287 examples * 80%) and check the performance of model using validation set (287 examples * 20%). Then we use it to predict the annual water withdrawal per capita in the testing set (123 examples).
 
 ### 3.2 Random Forests
@@ -211,7 +215,7 @@ Table: Model performance under different dropout rate
 
 ![**Model performance history (dropout rate = 0.2)**](images/dropout_0.2.png){#fig: dropout_0.2 width="4in"}
 
-![**Model performance history (dropout rate = 0.3)**](images/bdropout_0.3.png){#fig: dropout_0.3 width="4in"}
+![**Model performance history (dropout rate = 0.3)**](images/dropout_0.3.png){#fig: dropout_0.3 width="4in"}
 
 As dropout rate increases, overfitting problem can be reduced, but the RMSE of both training data and validation do not decrease. Therefore, we still set dropout rate at 0.01, which gives the best performance of the model.
 So, we find the best combination of hyperparameter values as follows:
