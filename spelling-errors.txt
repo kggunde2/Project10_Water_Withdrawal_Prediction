@@ -33,7 +33,7 @@ Gunderson
 HDI
 hydrological
 Hyperparameter
-Hyperparameters
+hyperparameters
 incididunt
 inhab
 ipsum
