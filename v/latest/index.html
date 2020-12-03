@@ -109,9 +109,9 @@
   <meta name="citation_fulltext_html_url" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/" />
   <meta name="citation_pdf_url" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/7c26222e96b79bc6bb1c1c9aac60078186d79a28/" />
-  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/7c26222e96b79bc6bb1c1c9aac60078186d79a28/" />
-  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/7c26222e96b79bc6bb1c1c9aac60078186d79a28/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/cbae5c243289559cdddb4892b82343ea8c58c991/" />
+  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/cbae5c243289559cdddb4892b82343ea8c58c991/" />
+  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/cbae5c243289559cdddb4892b82343ea8c58c991/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -132,9 +132,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/7c26222e96b79bc6bb1c1c9aac60078186d79a28/">permalink</a>)
+(<a href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/cbae5c243289559cdddb4892b82343ea8c58c991/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/7c26222e96b79bc6bb1c1c9aac60078186d79a28">gooood-night/Project10_Water_Withdrawal_Prediction@7c26222</a>
+from <a href="https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/cbae5c243289559cdddb4892b82343ea8c58c991">gooood-night/Project10_Water_Withdrawal_Prediction@cbae5c2</a>
 on December 3, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -163,71 +163,109 @@ Civil and Environmental Engineering, University of Illinois at Urbana-Champaign
 In this project, we intend to predict annual total water withdrawal per capita and select 13 variables as features based on previous studies, which provide information about geography, economic, climate, water resources utilities, etc. So, the raw dataset used includes 1 dependent variable and 13 features that span 200 countries across 8 different five-year periods from 1978 to 2017.</p>
 <h3 id="exploratory-data-analysis">2.2 Exploratory Data Analysis</h3>
 <p>This project aims at predicting water withdrawal per capita. Water withdrawal per capita is affected many factors, such as water availability, climate, demographics, economics, etc. Let’s first look at the water withdrawal per capita.</p>
-<div id="fig:15dca644-67a1-459b-bdc5-bcefaf7a63e5" class="fignos">
-<figure>
-<img src="images/histogram_of_total_water_withdrawal.png" style="width:4in" alt="" /><figcaption><span>Figure 1:</span> <strong>Histogram of the target variable</strong></figcaption>
-</figure>
-</div>
+<p><img src="images/histogram_of_total_water_withdrawal.png" id="fig:" style="width:4in" alt="Histogram of the target variable" />{.center}</p>
 <p>As shown in Figure 1, the distribution of total water withdrawal is not symmetric. For 75% entries, the annual total water withdrawal per capita is less than 704.7 m3/inhab/year, while the maximum annual total water withdrawal per capita is 5739 m3/inhab/year. The difference between countries is huge. Let us closely look at the average annual total water withdrawal per capita during 2013-2017 in each country.</p>
-<div id="fig:a7a0620e-27df-4572-b9c1-8188f1d5166b" class="fignos">
-<figure>
-<img src="images/world.png" style="width:6in" alt="" /><figcaption><span>Figure 2:</span> <strong>Total water withdrawal per capita in the world</strong></figcaption>
-</figure>
-</div>
+<p><img src="images/world.png" id="fig:" style="width:7in" alt="Total water withdrawal per capita in the world" />{.center}</p>
 <p>Although the water withdrawal data during 2013-2017 of many African and west Asian countries are missing, we can find that the water withdrawal per capita varies among countries from Figure 2. For most countries, the total water withdrawal per capita is below 500 m3/inhab/year, but for Canada, the United States, Kazakhstan and Uzbekistan, the value is above 1000 m3/inhab/year.</p>
 <p>The raw dataset includes 13 numerical independent variables. However, there are many missing values in the original dataset. It is found that “Human Development Index (HDI)” and “Total population with access to safe drinking-water” are two variables with most missing values. Meanwhile, the correlation coefficients between the target variables and these two independent variables are small. So, these two variables are dropped. After further data cleaning, finally we have a dataset with 410 samples and 11 numerical features and 2 categorical features for predicting water withdrawal per capita.</p>
 <p>Figure 3 shows how the 11 independent variables correlate with the target variable and each other. As can be seen, “Long-term average annual precipitation in volume (10^9 m3/year)” and “Total renewable water resources (10^9 m3/year)” are highly related with the correlation coefficient of 0.97. We need to remove one of them for ML model input.</p>
-<div id="fig:0788275a-5ca5-48ae-bbbf-a2e014451353" class="fignos">
-<figure>
-<img src="images/variables_correlation_matrix.png" style="width:5.5in" alt="" /><figcaption><span>Figure 3:</span> <strong>Correlation coefficient</strong></figcaption>
-</figure>
-</div>
+<p><img src="images/variables_correlation_matrix.png" id="fig:" style="width:6.5in" alt="Correlation coefficient" />{.center}</p>
 <h2 id="methods">3. Methods</h2>
 <h3 id="neural-network">3.1 Neural Network</h3>
 <p>Predicting water withdrawal per capita is a complex problem considering various affecting factors and non-linear relationships. We choose neural network to train our model in this project. Artificial Neural Networks have the ability to learn and model non-linear relationships, which is really important for water withdrawal prediction problem.</p>
-<p>Step 1: Data Preprocessing
+<ul>
+<li><p>Step 1: Data Preprocessing
 As there is no missing value in training and testing datasets, we only need to perform feature scaling for numerical variables based on the training dataset. In this step, we normalize the numerical input variables with skew higher than 3 and then standardize all the numerical variables. Considering the distribution of the target variable is skewed, we also normalize the target variable using log transformation.
-Since there are two categorical variables (i.e. country and year), we also do some feature engineering to prepare all the variables for use in the model.
-Step 2: Modeling
-We design a DNN model with one feature layer, three hidden layers, one linear single-output layer and one layer that inverses the standardization transformation. And for each hidden layer, there is 64 units. To reduce overfitting, dropout is implemented per-layer in the neural network. We choose rectified linear unit activation function (ReLU) as the activation function of hidden layers, which is not only easier to compute but also works better than a smooth function such as the sigmoid. Besides, we choose Mean Squared Error (MSE) as the loss function of our model.
-Step 3: Hyperparameter Tuning
-We will use Grid Search that can test the performance of different combinations of hyperparameter values and find the optimal one. The hyperparameters that will be tuned include learning rate, batch size, epochs and dropout rate. In this step, we ignore two categorical variables and only use ten numerical variables as chosen features.
-Step 4: Predicting
-After obtaining the best combination of hyperparameter values, we train the neural network using training set (287 examples * 80%) and check the performance of model using validation set (287 examples * 20%). Then we use it to predict the annual water withdrawal per capita in the testing set (123 examples).</p>
+Since there are two categorical variables (i.e. country and year), we also do some feature engineering to prepare all the variables for use in the model.</p></li>
+<li><p>Step 2: Modeling
+We design a DNN model with one feature layer, three hidden layers, one linear single-output layer and one layer that inverses the standardization transformation. And for each hidden layer, there is 64 units. To reduce overfitting, dropout is implemented per-layer in the neural network. We choose rectified linear unit activation function (ReLU) as the activation function of hidden layers, which is not only easier to compute but also works better than a smooth function such as the sigmoid. Besides, we choose Mean Squared Error (MSE) as the loss function of our model.</p></li>
+<li><p>Step 3: Hyperparameter Tuning
+We will use Grid Search that can test the performance of different combinations of hyperparameter values and find the optimal one. The hyperparameters that will be tuned include learning rate, batch size, epochs and dropout rate. In this step, we ignore two categorical variables and only use ten numerical variables as chosen features.</p></li>
+<li><p>Step 4: Predicting
+After obtaining the best combination of hyperparameter values, we train the neural network using training set (287 examples * 80%) and check the performance of model using validation set (287 examples * 20%). Then we use it to predict the annual water withdrawal per capita in the testing set (123 examples).</p></li>
+</ul>
 <h3 id="random-forests">3.2 Random Forests</h3>
 <h2 id="results">4. Results</h2>
 <h3 id="results-of-neural-network">4.1 Results of Neural Network</h3>
 <p>We use tensorflow to build Neural Network in this project. The default values of hyperparameters are as follows: learning rate = 0.01, batch size = 40, epoch = 50, and dropout rate = 0.1. The performance of this model is shown in Figure 4 to Figure 6. The RMSE of the training data is 174.35 and the RMSE of the testing data is 259.79.</p>
-<p><img src="images/before.png" id="fig:" style="width:4in" alt="Model performance history" />
-<img src="images/before_training.png" id="fig:" style="width:4in" alt="Predictive performance in training data" />
-<img src="images/before_validation.png" id="fig:" style="width:4in" alt="Predictive performance in validation data" /></p>
-<p>We use Grid Search to tune the hyperparameters to improve the model performance. The results are shown in Table 1.
-| Hyperparameters | Possible values | Best value |
-|:—————–|:————-:|:————-:|
-| Batch Size | 2, 4, 8, 16,32, 64 | 64 |
-| Epochs | 10, 50, 100, 200 |100 |
-| Learning rate | 0.001, 0.005, 0.01, 0.05, 0.1, 0.2| 0.005 |
-Table: The results of hyperparameter tuning
-{#tbl:tuning}</p>
-<p>In addition, we test several dropout rates to find the value that can reduce overfitting. The results are shown in Table 2 and figures below.
-| Dropout rate | RMSE of Traning data | RMSE of Validation data |
-|:—————–|:————-:|:————-:|
-| 0.1 | 77.03 | 167.24 |
-| 0.2 | 87.31 | 219.42 |
-| 0.3 | 312.99| 242.12 |
-Table: Model performance under different dropout rate
-{#tbl:dropout}</p>
-<p><img src="images/dropout_0.1.png" id="fig:" style="width:4in" alt="Model performance history (dropout rate = 0.1)" />
-<img src="images/dropout_0.2.png" id="fig:" style="width:4in" alt="Model performance history (dropout rate = 0.2)" />
-<img src="images/bdropout_0.3.png" id="fig:" style="width:4in" alt="Model performance history (dropout rate = 0.3)" /></p>
+<p><img src="images/before.png" id="fig:" style="width:4in" alt="Model performance history" />{.center}</p>
+<p><img src="images/before_training.png" id="fig:" style="width:4in" alt="Predictive performance in training data" />{.center}</p>
+<p><img src="images/before_validation.png" id="fig:" style="width:4in" alt="Predictive performance in validation data" />{.center}</p>
+<p>We use Grid Search to tune the hyperparameters to improve the model performance. The results are shown in Table 1.</p>
+<div id="tbl:tuning" class="tablenos">
+<table>
+<caption><span>Table 1:</span> The results of hyperparameter tuning
+</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Hyperparameters</th>
+<th style="text-align: center;">Possible values</th>
+<th style="text-align: center;">Best value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Batch Size</td>
+<td style="text-align: center;">2, 4, 8, 16,32, 64</td>
+<td style="text-align: center;">64</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Epochs</td>
+<td style="text-align: center;">10, 50, 100, 200</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Learning rate</td>
+<td style="text-align: center;">0.001, 0.005, 0.01, 0.05, 0.1, 0.2</td>
+<td style="text-align: center;">0.005</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In addition, we test several dropout rates to find the value that can reduce overfitting. The results are shown in Table 2 and figures below.</p>
+<div id="tbl:dropout" class="tablenos">
+<table>
+<caption><span>Table 2:</span> Model performance under different dropout rate
+</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Dropout rate</th>
+<th style="text-align: center;">RMSE of Traning data</th>
+<th style="text-align: center;">RMSE of Validation data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0.1</td>
+<td style="text-align: center;">77.03</td>
+<td style="text-align: center;">167.24</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0.2</td>
+<td style="text-align: center;">87.31</td>
+<td style="text-align: center;">219.42</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">0.3</td>
+<td style="text-align: center;">312.99</td>
+<td style="text-align: center;">242.12</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img src="images/dropout_0.1.png" id="fig:" style="width:4in" alt="Model performance history (dropout rate = 0.1)" />{.center}</p>
+<p><img src="images/dropout_0.2.png" id="fig:" style="width:4in" alt="Model performance history (dropout rate = 0.2)" />{.center}</p>
+<p><img src="images/bdropout_0.3.png" id="fig:" style="width:4in" alt="Model performance history (dropout rate = 0.3)" />{.center}</p>
 <p>As dropout rate increases, overfitting problem can be reduced, but the RMSE of both training data and validation do not decrease. Therefore, we still set dropout rate at 0.01, which gives the best performance of the model.
-So, we find the best combination of hyperparameter values as follows:
-- batch size = 64
-- epoch = 100
-- learning rate = 0.005
-- dropout rate = 0.1</p>
-<p><img src="images/after_training.png" id="fig:" style="width:4in" alt="Predictive performance in training data after hyperparameter tuning" />
-<img src="images/after_validation.png" id="fig:" style="width:4in" alt="Predictive performance in validation data after hyperparameter tuning" /></p>
+So, we find the best combination of hyperparameter values as follows:</p>
+<ul>
+<li>batch size = 64</li>
+<li>epoch = 100</li>
+<li>learning rate = 0.005</li>
+<li>dropout rate = 0.1</li>
+</ul>
+<p><img src="images/after_training.png" id="fig:" style="width:4in" alt="Predictive performance in training data after hyperparameter tuning" />{.center}</p>
+<p><img src="images/after_validation.png" id="fig:" style="width:4in" alt="Predictive performance in validation data after hyperparameter tuning" />{.center}</p>
 <p>Finally, we use this neural network to predict the total annual water withdrawal per capita in the testing dataset, and the Root Mean Squared Error is 144.82.</p>
 <h2 id="basic-formatting">Basic formatting</h2>
 <p><strong>Bold</strong> <strong>text</strong></p>
@@ -302,11 +340,11 @@ two spaces at end of line.</p>
 Manubot plugins provide easier, more convenient visualization of and navigation between citations <span class="citation" data-cites="YuJbg3zO 126Wi5Us4 mSMVRkoc PZMP42Ak">[<a href="#ref-mSMVRkoc" role="doc-biblioref">2</a>,<a href="#ref-126Wi5Us4" role="doc-biblioref">3</a>,<a href="#ref-PZMP42Ak" role="doc-biblioref">7</a>,<a href="#ref-YuJbg3zO" role="doc-biblioref">8</a>]</span>.</p>
 <p>Citation tags (i.e. aliases) can be defined in their own paragraphs using Markdown’s reference link syntax:</p>
 <h2 id="referencing-figures-tables-equations">Referencing figures, tables, equations</h2>
-<p>Figure <a href="#fig:square-image">4</a></p>
-<p>Figure <a href="#fig:wide-image">5</a></p>
-<p>Figure <a href="#fig:tall-image">6</a></p>
-<p>Figure <a href="#fig:vector-image">7</a></p>
-<p>Table <a href="#tbl:bowling-scores">1</a></p>
+<p>Figure <a href="#fig:square-image">1</a></p>
+<p>Figure <a href="#fig:wide-image">2</a></p>
+<p>Figure <a href="#fig:tall-image">3</a></p>
+<p>Figure <a href="#fig:vector-image">4</a></p>
+<p>Table <a href="#tbl:bowling-scores">3</a></p>
 <p>Equation <a href="#eq:regular-equation">1</a></p>
 <p>Equation <a href="#eq:long-equation">2</a></p>
 <h2 id="quotes-and-code">Quotes and code</h2>
@@ -334,25 +372,25 @@ Exporting PDF manuscript</code></pre>
 <h2 id="figures">Figures</h2>
 <div id="fig:square-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png" alt="" /><figcaption><span>Figure 4:</span> <strong>A square image at actual size and with a bottom caption.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png" alt="" /><figcaption><span>Figure 1:</span> <strong>A square image at actual size and with a bottom caption.</strong>
 Loaded from the latest version of image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:wide-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png" alt="" /><figcaption><span>Figure 5:</span> <strong>An image too wide to fit within page at full size.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png" alt="" /><figcaption><span>Figure 2:</span> <strong>An image too wide to fit within page at full size.</strong>
 Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:tall-image" class="fignos">
 <figure>
-<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png" style="height:3in" alt="" /><figcaption><span>Figure 6:</span> <strong>A tall image with a specified height.</strong>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png" style="height:3in" alt="" /><figcaption><span>Figure 3:</span> <strong>A tall image with a specified height.</strong>
 Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
 </figure>
 </div>
 <div id="fig:vector-image" class="fignos">
 <figure>
-<img src="https://raw.githubusercontent.com/manubot/resources/master/test/vector.svg?sanitize=true" class="white" style="height:2.5in" alt="" /><figcaption><span>Figure 7:</span> <strong>A vector <code>.svg</code> image loaded from GitHub.</strong>
+<img src="https://raw.githubusercontent.com/manubot/resources/master/test/vector.svg?sanitize=true" class="white" style="height:2.5in" alt="" /><figcaption><span>Figure 4:</span> <strong>A vector <code>.svg</code> image loaded from GitHub.</strong>
 The parameter <code>sanitize=true</code> is necessary to properly load SVGs hosted via GitHub URLs.
 White background specified to serve as a backdrop for transparent sections of the image.</figcaption>
 </figure>
@@ -360,7 +398,7 @@ White background specified to serve as a backdrop for transparent sections of th
 <h2 id="tables">Tables</h2>
 <div id="tbl:bowling-scores" class="tablenos">
 <table>
-<caption><span>Table 1:</span> A table with a top caption and specified relative column widths.
+<caption><span>Table 3:</span> A table with a top caption and specified relative column widths.
 </caption>
 <thead>
 <tr class="header">
@@ -398,7 +436,7 @@ White background specified to serve as a backdrop for transparent sections of th
 </div>
 <div id="tbl:constant-digits" class="tablenos">
 <table>
-<caption><span>Table 2:</span> A table too wide to fit within page.
+<caption><span>Table 4:</span> A table too wide to fit within page.
 </caption>
 <colgroup>
 <col style="width: 5%" />
@@ -434,9 +472,9 @@ White background specified to serve as a backdrop for transparent sections of th
 </tbody>
 </table>
 </div>
-<div id="tbl:ee068e6a-d407-4d70-a787-65622713a024" class="tablenos">
+<div id="tbl:623e416f-365b-4d45-bbf2-b23c6db0f8d0" class="tablenos">
 <table>
-<caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
+<caption><span>Table 5:</span> A table with merged cells using the <code>attributes</code> plugin.
 </caption>
 <thead>
 <tr class="header">
