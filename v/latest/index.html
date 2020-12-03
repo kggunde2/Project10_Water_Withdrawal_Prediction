@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Kathryn Grace Gunderson" />
   <meta name="author" content="Yanan Chen" />
-  <meta name="dcterms.date" content="2020-12-02" />
+  <meta name="dcterms.date" content="2020-12-03" />
   <meta name="keywords" content="water withdrawal per capita, neural network, random forest" />
   <title>CEE 498 Project 10: Water Withdrawal Prediction</title>
   <style>
@@ -91,8 +91,8 @@
   <meta name="citation_title" content="CEE 498 Project 10: Water Withdrawal Prediction" />
   <meta property="og:title" content="CEE 498 Project 10: Water Withdrawal Prediction" />
   <meta property="twitter:title" content="CEE 498 Project 10: Water Withdrawal Prediction" />
-  <meta name="dc.date" content="2020-12-02" />
-  <meta name="citation_publication_date" content="2020-12-02" />
+  <meta name="dc.date" content="2020-12-03" />
+  <meta name="citation_publication_date" content="2020-12-03" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -109,9 +109,9 @@
   <meta name="citation_fulltext_html_url" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/" />
   <meta name="citation_pdf_url" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b71d760431f9c53bdcbf6e8da0613aa224897b31/" />
-  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b71d760431f9c53bdcbf6e8da0613aa224897b31/" />
-  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b71d760431f9c53bdcbf6e8da0613aa224897b31/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/f9191fb793f9ded8296cf6c83ef4664b1b5d2325/" />
+  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/f9191fb793f9ded8296cf6c83ef4664b1b5d2325/" />
+  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/f9191fb793f9ded8296cf6c83ef4664b1b5d2325/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -132,10 +132,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b71d760431f9c53bdcbf6e8da0613aa224897b31/">permalink</a>)
+(<a href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/f9191fb793f9ded8296cf6c83ef4664b1b5d2325/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/b71d760431f9c53bdcbf6e8da0613aa224897b31">gooood-night/Project10_Water_Withdrawal_Prediction@b71d760</a>
-on December 2, 2020.
+from <a href="https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/f9191fb793f9ded8296cf6c83ef4664b1b5d2325">gooood-night/Project10_Water_Withdrawal_Prediction@f9191fb</a>
+on December 3, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -163,13 +163,13 @@ Civil and Environmental Engineering, University of Illinois at Urbana-Champaign
 In this project, we intend to predict annual total water withdrawal per capita and select 13 variables as features based on previous studies, which provide information about geography, economic, climate, water resources utilities, etc. So, the raw dataset used includes 1 dependent variable and 13 features that span 200 countries across 8 different five-year periods from 1978 to 2017.</p>
 <h3 id="exploratory-data-analysis">2.2 Exploratory Data Analysis</h3>
 <p>This project aims at predicting water withdrawal per capita. Water withdrawal per capita is affected many factors, such as water availability, climate, demographics, economics, etc. Let’s first look at the water withdrawal per capita.</p>
-<div id="fig:e14e8dd9-3ad6-4a5b-becc-ec5329490e1e" class="fignos">
+<div id="fig:b0afff13-6b15-4a00-b672-28cde94d2aa9" class="fignos">
 <figure>
 <img src="images/histogram_of_total_water_withdrawal.png" alt="" /><figcaption><span>Figure 1:</span> ** Histogram of the target variable **</figcaption>
 </figure>
 </div>
 <p>As shown in Figure 1, the distribution of total water withdrawal is not symmetric. For 75% entries, the annual total water withdrawal per capita is less than 704.7 m3/inhab/year, while the maximum annual total water withdrawal per capita is 5739 m3/inhab/year. The difference between countries is huge. Let us closely look at the average annual total water withdrawal per capita during 2013-2017 in each country.</p>
-<div id="fig:e220ba0b-be4e-416a-b2b0-1ad44e65b5d7" class="fignos">
+<div id="fig:f1a065ab-b2fa-470a-8d85-e03ca1c15add" class="fignos">
 <figure>
 <img src="images/worldwide_water_withdrawal.png" alt="" /><figcaption><span>Figure 2:</span> ** Total water withdrawal per capita in the world **</figcaption>
 </figure>
@@ -177,7 +177,7 @@ In this project, we intend to predict annual total water withdrawal per capita a
 <p>Although the water withdrawal data during 2013-2017 of many African and west Asian countries are missing, we can find that the water withdrawal per capita varies among countries from Figure 2. For most countries, the total water withdrawal per capita is below 500 m3/inhab/year, but for Canada, the United States, Kazakhstan and Uzbekistan, the value is above 1000 m3/inhab/year.</p>
 <p>The raw dataset includes 13 numerical independent variables. However, there are many missing values in the original dataset. It is found that “Human Development Index (HDI)” and “Total population with access to safe drinking-water” are two variables with most missing values. Meanwhile, the correlation coefficients between the target variables and these two independent variables are small. So, these two variables are dropped. After further data cleaning, finally we have a dataset with 410 samples and 11 numerical features and 2 categorical features for predicting water withdrawal per capita.</p>
 <p>Figure 3 shows how the 11 independent variables correlate with the target variable and each other. As can be seen, “Long-term average annual precipitation in volume (10^9 m3/year)” and “Total renewable water resources (10^9 m3/year)” are highly related with the correlation coefficient of 0.97. We need to remove one of them for ML model input.</p>
-<div id="fig:5f72864f-dc35-456d-bd65-4c084b7ab204" class="fignos">
+<div id="fig:c6730d60-2a89-4fd0-b8e1-ca4d312abb39" class="fignos">
 <figure>
 <img src="images/variables%20correlation%20matrix.png" alt="" /><figcaption><span>Figure 3:</span> ** Correlation coefficient **</figcaption>
 </figure>
@@ -400,7 +400,7 @@ White background specified to serve as a backdrop for transparent sections of th
 </tbody>
 </table>
 </div>
-<div id="tbl:f26b881e-ac0c-4518-8ab3-6704cc017995" class="tablenos">
+<div id="tbl:a28907a0-9f5e-4fe5-ab27-6bce4b9c65bc" class="tablenos">
 <table>
 <caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
 </caption>
