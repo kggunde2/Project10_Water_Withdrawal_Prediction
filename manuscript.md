@@ -59,11 +59,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/49b99a513c85ea4e8ccdc42ec3a2204df58e618b/" />
+  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/7c26222e96b79bc6bb1c1c9aac60078186d79a28/" />
 
-  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/49b99a513c85ea4e8ccdc42ec3a2204df58e618b/" />
+  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/7c26222e96b79bc6bb1c1c9aac60078186d79a28/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/49b99a513c85ea4e8ccdc42ec3a2204df58e618b/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/7c26222e96b79bc6bb1c1c9aac60078186d79a28/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -95,9 +95,9 @@ title: 'CEE 498 Project 10: Water Withdrawal Prediction'
 
 <small><em>
 This manuscript
-([permalink](https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/49b99a513c85ea4e8ccdc42ec3a2204df58e618b/))
+([permalink](https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/7c26222e96b79bc6bb1c1c9aac60078186d79a28/))
 was automatically generated
-from [gooood-night/Project10_Water_Withdrawal_Prediction@49b99a5](https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/49b99a513c85ea4e8ccdc42ec3a2204df58e618b)
+from [gooood-night/Project10_Water_Withdrawal_Prediction@7c26222](https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/7c26222e96b79bc6bb1c1c9aac60078186d79a28)
 on December 3, 2020.
 </em></small>
 
@@ -141,11 +141,11 @@ In this project, we intend to predict annual total water withdrawal per capita a
 ### 2.2 Exploratory Data Analysis
 This project aims at predicting water withdrawal per capita. Water withdrawal per capita is affected many factors, such as water availability, climate, demographics, economics, etc. Let's first look at the water withdrawal per capita.
 
-![** Histogram of the target variable **](images/histogram_of_total_water_withdrawal.png){#fig: histogram}
+![**Histogram of the target variable**](images/histogram_of_total_water_withdrawal.png){#fig: histogram width="4in"}
 
 As shown in Figure 1, the distribution of total water withdrawal is not symmetric. For 75% entries, the annual total water withdrawal per capita is less than 704.7 m3/inhab/year, while the maximum annual total water withdrawal per capita is 5739 m3/inhab/year. The difference between countries is huge. Let us closely look at the average annual total water withdrawal per capita during 2013-2017 in each country.
 
-![** Total water withdrawal per capita in the world **](images/worldwide_water_withdrawal.png){#fig: world}
+![**Total water withdrawal per capita in the world**](images/world.png){#fig: world width="6in"}
 
 Although the water withdrawal data during 2013-2017 of many African and west Asian countries are missing, we can find that the water withdrawal per capita varies among countries from Figure 2. For most countries, the total water withdrawal per capita is below 500 m3/inhab/year, but for Canada, the United States, Kazakhstan and Uzbekistan, the value is above 1000 m3/inhab/year.
 
@@ -153,7 +153,7 @@ The raw dataset includes 13 numerical independent variables. However, there are 
 
 Figure 3 shows how the 11 independent variables correlate with the target variable and each other. As can be seen, "Long-term average annual precipitation in volume (10^9 m3/year)" and "Total renewable water resources (10^9 m3/year)" are highly related with the correlation coefficient of 0.97. We need to remove one of them for ML model input.
 
-![** Correlation coefficient **](images/variables correlation matrix.png){#fig: corr_matrix}
+![**Correlation coefficient**](images/variables_correlation_matrix.png){#fig: corr_matrix width="5.5in"}
 
 ## 3. Methods
 ### 3.1 Neural Network
@@ -170,6 +170,50 @@ Step 4: Predicting
 After obtaining the best combination of hyperparameter values, we train the neural network using training set (287 examples * 80%) and check the performance of model using validation set (287 examples * 20%). Then we use it to predict the annual water withdrawal per capita in the testing set (123 examples).
 
 ### 3.2 Random Forests
+
+
+## 4. Results
+### 4.1 Results of Neural Network
+We use tensorflow to build Neural Network in this project. The default values of hyperparameters are as follows: learning rate = 0.01, batch size = 40, epoch = 50, and dropout rate = 0.1. The performance of this model is shown in Figure 4 to Figure 6. The RMSE of the training data is 174.35 and the RMSE of the testing data is 259.79.
+
+![**Model performance history**](images/before.png){#fig: before width="4in"}
+![**Predictive performance in training data**](images/before_training.png){#fig: before_training width="4in"}
+![**Predictive performance in validation data**](images/before_validation.png){#fig: before_validation width="4in"}
+
+We use Grid Search to tune the hyperparameters to improve the model performance. The results are shown in Table 1.
+| Hyperparameters | Possible values     | Best value       |
+|:-----------------|:-------------:|:-------------:|
+| Batch Size | 2, 4, 8, 16,32, 64 | 64 | 
+| Epochs | 10, 50, 100, 200  |100 |
+| Learning rate | 0.001, 0.005, 0.01, 0.05, 0.1, 0.2| 0.005 |
+Table: The results of hyperparameter tuning
+{#tbl:tuning}
+
+In addition, we test several dropout rates to find the value that can reduce overfitting. The results are shown in Table 2 and figures below.
+| Dropout rate |  RMSE of Traning data     | RMSE of Validation data  |
+|:-----------------|:-------------:|:-------------:|
+| 0.1 | 77.03 | 167.24 | 
+| 0.2 | 87.31 | 219.42 |
+| 0.3 | 312.99| 242.12 |
+Table: Model performance under different dropout rate
+{#tbl:dropout}
+
+![**Model performance history (dropout rate = 0.1)**](images/dropout_0.1.png){#fig: dropout_0.1 width="4in"}
+![**Model performance history (dropout rate = 0.2)**](images/dropout_0.2.png){#fig: dropout_0.2 width="4in"}
+![**Model performance history (dropout rate = 0.3)**](images/bdropout_0.3.png){#fig: dropout_0.3 width="4in"}
+
+As dropout rate increases, overfitting problem can be reduced, but the RMSE of both training data and validation do not decrease. Therefore, we still set dropout rate at 0.01, which gives the best performance of the model.
+So, we find the best combination of hyperparameter values as follows:
+- batch size = 64
+- epoch = 100
+- learning rate = 0.005
+- dropout rate = 0.1
+
+![**Predictive performance in training data after hyperparameter tuning**](images/after_training.png){#fig: after_training width="4in"}
+![**Predictive performance in validation data after hyperparameter tuning**](images/after_validation.png){#fig: after_validation width="4in"}
+
+Finally, we use this neural network to predict the total annual water withdrawal per capita in the testing dataset, and the Root Mean Squared Error is 144.82.
+
 
 ## Basic formatting
 

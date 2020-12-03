@@ -32,7 +32,7 @@ gooood
 Gunderson
 HDI
 hydrological
-hyperparameter
+Hyperparameter
 hyperparameters
 incididunt
 inhab
@@ -59,12 +59,15 @@ qui
 quis
 ReLU
 reprehenderit
+RMSE
 sed
 sigmoid
 sint
 sociodemographic
 sunt
 tempor
+tensorflow
+Traning
 ullamco
 Urbana
 velit
