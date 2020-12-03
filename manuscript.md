@@ -59,11 +59,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/7de059d78bdb0b9f80970add0d579a9901af9894/" />
+  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/49b99a513c85ea4e8ccdc42ec3a2204df58e618b/" />
 
-  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/7de059d78bdb0b9f80970add0d579a9901af9894/" />
+  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/49b99a513c85ea4e8ccdc42ec3a2204df58e618b/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/7de059d78bdb0b9f80970add0d579a9901af9894/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/49b99a513c85ea4e8ccdc42ec3a2204df58e618b/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -95,9 +95,9 @@ title: 'CEE 498 Project 10: Water Withdrawal Prediction'
 
 <small><em>
 This manuscript
-([permalink](https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/7de059d78bdb0b9f80970add0d579a9901af9894/))
+([permalink](https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/49b99a513c85ea4e8ccdc42ec3a2204df58e618b/))
 was automatically generated
-from [gooood-night/Project10_Water_Withdrawal_Prediction@7de059d](https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/7de059d78bdb0b9f80970add0d579a9901af9894)
+from [gooood-night/Project10_Water_Withdrawal_Prediction@49b99a5](https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/49b99a513c85ea4e8ccdc42ec3a2204df58e618b)
 on December 3, 2020.
 </em></small>
 

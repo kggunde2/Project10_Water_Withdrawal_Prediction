@@ -32,7 +32,7 @@ gooood
 Gunderson
 HDI
 hydrological
-Hyperparameter
+hyperparameter
 hyperparameters
 incididunt
 inhab
