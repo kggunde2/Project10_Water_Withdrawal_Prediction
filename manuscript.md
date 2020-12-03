@@ -4,7 +4,7 @@ author-meta:
 - Yanan Chen
 bibliography:
 - content/manual-references.json
-date-meta: '2020-12-02'
+date-meta: '2020-12-03'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -23,9 +23,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="CEE 498 Project 10: Water Withdrawal Prediction" />
 
-  <meta name="dc.date" content="2020-12-02" />
+  <meta name="dc.date" content="2020-12-03" />
 
-  <meta name="citation_publication_date" content="2020-12-02" />
+  <meta name="citation_publication_date" content="2020-12-03" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -59,11 +59,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b71d760431f9c53bdcbf6e8da0613aa224897b31/" />
+  <link rel="alternate" type="text/html" href="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/f9191fb793f9ded8296cf6c83ef4664b1b5d2325/" />
 
-  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b71d760431f9c53bdcbf6e8da0613aa224897b31/" />
+  <meta name="manubot_html_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/f9191fb793f9ded8296cf6c83ef4664b1b5d2325/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b71d760431f9c53bdcbf6e8da0613aa224897b31/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/f9191fb793f9ded8296cf6c83ef4664b1b5d2325/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -95,10 +95,10 @@ title: 'CEE 498 Project 10: Water Withdrawal Prediction'
 
 <small><em>
 This manuscript
-([permalink](https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/b71d760431f9c53bdcbf6e8da0613aa224897b31/))
+([permalink](https://gooood-night.github.io/Project10_Water_Withdrawal_Prediction/v/f9191fb793f9ded8296cf6c83ef4664b1b5d2325/))
 was automatically generated
-from [gooood-night/Project10_Water_Withdrawal_Prediction@b71d760](https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/b71d760431f9c53bdcbf6e8da0613aa224897b31)
-on December 2, 2020.
+from [gooood-night/Project10_Water_Withdrawal_Prediction@f9191fb](https://github.com/gooood-night/Project10_Water_Withdrawal_Prediction/tree/f9191fb793f9ded8296cf6c83ef4664b1b5d2325)
+on December 3, 2020.
 </em></small>
 
 ## Authors
